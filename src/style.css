@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,100;1,200;1,300&display=swap");
+
+:root {
+  --dot-yellow: #f49c37;
+  --dot-orange: #e65b5b;
+  --dot-pink: #c7247a;
+  --dot-purple: #601d86;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #f3f2ea;
+}
+
+h3 {
+  color: #e81010;
+  background-image: -webkit-linear-gradient(0deg, #e81010 0%, #611d2a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: 1.3px;
+  word-spacing: 2px;
+}
+
+/* Navbar */
+
+.navbar {
+  padding: 0.7rem;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.navbar .heading {
+  font-size: 30px;
+  letter-spacing: 1.2px;
+  margin-bottom: 15px;
+
+  color: #42d934;
+  background-image: -webkit-linear-gradient(0deg, #42d934 0%, #5f8249 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar .heading,
+.navbar blockquote {
+  text-align: center;
+  letter-spacing: 1.1px;
+}
+
+.navbar blockquote {
+  font-style: italic;
+}
+
+/* Search box */
+
+.search-box {
+  height: 150px;
+  width: 60%;
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 70%;
+  margin-bottom: 1.1rem;
+}
+
+.meal-search-box {
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.search-control,
+.search-btn {
+  width: 100%;
+}
+
+.search-control {
+  padding: 15px;
+  outline: none;
+  border: 1px solid orange;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.search-btn {
+  width: 20%;
+  padding: 12px;
+  background-color: lightgreen;
+  outline: none;
+  border: 1px solid orange;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+form .btn:hover {
+  background-color: #60d560;
+  cursor: pointer;
+}
+
+.search-result {
+  letter-spacing: 1.2px;
+
+  color: #42d934;
+  background-image: -webkit-linear-gradient(0deg, #42d934 0%, #5f8249 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Meal Item */
+.meal-wrapper {
+  max-width: 1400px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  gap: 30px;
+}
+
+.meal-wrapper .meal-item {
+  height: 400px;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 10px 10px 42px -21px rgba(0, 0, 0, 0.75);
+}
+
+.meal-wrapper .meal-item img {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.meal-wrapper .meal-item .meal-content {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.meal-wrapper .meal-item .meal-content h3 {
+  margin-bottom: 25px;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.meal-wrapper .meal-item .meal-content button {
+  padding: 15px 35px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  outline: none;
+  border: none;
+  background-color: #ff1616;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.meal-wrapper .meal-item .meal-content button:hover {
+  background-color: #da1212;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+
+/* Modal Container */
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+
+.modal-container.active {
+  display: flex;
+}
+
+.modal {
+  background-color: orangered;
+  color: #fff;
+  width: 900px;
+  height: 90%;
+  overflow-y: scroll;
+  padding: 30px;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+
+.modal .recipe-meal-img img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+
+.modal h2,
+.modal p,
+.modal .recipe-instruct h3 {
+  margin-bottom: 0.8rem;
+}
+
+.modal p {
+  font-size: 15px;
+}
+
+.modal .recipe-instruct p {
+  padding: 20px;
+}
+
+.recipe-link {
+  margin: 1.4rem 0;
+}
+.recipe-link a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+.recipe-link a:hover {
+  opacity: 0.8;
+}
+
+.disable {
+  display: none !important;
+}
+
+/* Animation Style */
+.loading {
+  align-items: center;
+  display: flex;
+  height: 40%;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  width: 100%;
+}
+
+.dot {
+  animation-timing-function: ease-in-out, linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: loading-wave, loading-color-change;
+  border-radius: 50%;
+  margin: 1px;
+
+  height: 20px;
+  width: 20px;
+}
+
+.dot-1 {
+  animation-delay: 0.1s;
+}
+.dot-2 {
+  animation-delay: 0.3s;
+}
+.dot-3 {
+  animation-delay: 0.6s;
+}
+.dot-4 {
+  animation-delay: 0.9s;
+}
+
+@keyframes loading-wave {
+  0%,
+  100% {
+    transform: translateY(-30px);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes loading-color-change {
+  0%,
+  100% {
+    background: var(--dot-purple);
+  }
+  25% {
+    background: var(--dot-pink);
+  }
+  50% {
+    background: var(--dot-orange);
+  }
+  75% {
+    background: var(--dot-yellow);
+  }
+}
+
+/* Modal Loader Animation */
+.loader-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border-top: 4px solid #cbf209;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

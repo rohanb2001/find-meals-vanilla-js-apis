@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./src/main.js" defer></script>
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Find your meal</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <h1 class="heading">Find Meals For Your Ingredients</h1>
+      <blockquote>
+        Real food doesn't have ingredients, real food is ingredients.<br />
+        <cite>- Jamie Oliver</cite>
+      </blockquote>
+    </nav>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <form class="form">
+        <div class="meal-search-box">
+          <input
+            type="text"
+            class="search-control"
+            placeholder="Enter an ingredient"
+            id="search-input"
+            autocomplete="off"
+          />
+          <button type="submit" class="search-btn btn" id="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+
+      <h2 class="search-result">Your Search Results:</h2>
+    </div>
+
+    <!-- Card Section -->
+    <div class="meal-wrapper">
+      <!-- <div class="meal-item">
+        <img src="./src/assets/meal-1.jpg" alt="food" />
+        <div class="meal-content">
+          <h3>burger</h3>
+          <button class="get-details">Get Recipe</button>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- Loader -->
+    <div class="loading disable">
+      <span class="dot dot-1"></span>
+      <span class="dot dot-2"></span>
+      <span class="dot dot-3"></span>
+      <span class="dot dot-4"></span>
+    </div>
+
+    <!-- Modal Container -->
+    <div class="modal-container">
+      <div class="modal">
+        <!-- <h2 class="recipe-title">Burger</h2>
+        <p class="recipe-category">Fast Food</p>
+        <div class="recipe-instruct">
+          <h3>Instructions:</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum,
+            expedita.
+          </p>
+        </div>
+        <div class="recipe-meal-img">
+          <img src="./src/assets/meal-1.jpg" alt="food" />
+        </div> -->
+      </div>
+
+      <div class="loader-container">
+        <div class="loader">
+        </div>
+    </div>
+  </body>
+</html>
